@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Property</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('/Users/johnwesley/Desktop/WESLEY/Work/static/images/home bg.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            background-color: rgba(255, 255, 255, 0.8); /* Adjust transparency as needed */
+            color: #000; /* Set text color */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Adjust transparency as needed */
+        }
+
+        .form-page {
+            display: none;
+        }
+
+        .form-page.active {
+            display: block;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-page customer-details active">
+            <h2>Customer Details</h2>
+            <form id="customerDetailsForm">
+                <!-- Customer details form fields go here -->
+                <label for="customerName">Name:</label>
+                <input type="text" id="customerName" name="customerName" required>
+
+                <label for="customerEmail">Email:</label>
+                <input type="email" id="customerEmail" name="customerEmail" required>
+
+                <label for="customerPhoneNumber">Phone Number:</label>
+                <input type="number" id="customerPhoneNumber" name="customerPhoneNumber" required>
+
+                <!-- Add more customer details fields as needed -->
+
+                <button type="button" onclick="nextPage('propertyDetails')">Next</button>
+            </form>
+        </div>
+
+        <div class="form-page property-details">
+            <h2>Property Details</h2>
+            <form id="propertyDetailsForm">
+                <!-- Property details form fields go here -->
+                <label for="propertyType">Property Type:</label>
+                <select id="propertyType" name="propertyType" required>
+                    <option value="apartment">Apartment</option>
+                    <option value="house">House</option>
+                    <!-- Add more options as needed -->
+                </select>
+
+                <label for="propertyLocation">Location:</label>
+                <input type="text" id="propertyLocation" name="propertyLocation" placeholder="Enter property location" required>
+
+                <label for="propertyArea">Area (Square Feet):</label>
+                <input type="text" id="propertyArea" name="propertyArea" placeholder="Enter property area" required>
+
+                <!-- Add more property details fields as needed -->
+
+                <button type="button" onclick="nextPage('customerDetails')">Previous</button>
+                <button type="button" onclick="submitForm()">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="sell.js"></script>
+</body>
+
+</html>

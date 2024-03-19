@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Operations</title>
+    <!-- Add Bootstrap CSS link here -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add Font Awesome CSS link here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        /* Add your custom CSS styling here */
+        body {
+            /* Set background image with transparency */
+            background-image: url('/Users/johnwesley/Desktop/WESLEY/Work/static/images/Home.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-blend-mode: overlay;
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency as needed */
+            color: #fff; /* Set text color */
+        }
+
+        .container {
+            /* Add custom container styling */
+            max-width: 800px; /* Adjust the maximum width */
+            margin: 50px auto 0; /* Center the container */
+        }
+
+        h1 {
+            /* Add custom heading styling */
+            color: #fff; /* Text color */
+        }
+
+        .icons-container {
+            /* Add custom styling for the icons container */
+            text-align: right;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 20px;
+        }
+
+        .icon {
+            /* Add custom styling for each icon */
+            font-size: 24px;
+            color: #fff; /* Icon color */
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Icons for Logout, Profile, Dashboard -->
+        
+        <h1 class="text-center">Home Operations</h1>
+
+        <!-- Buttons in the middle of the page -->
+        <div class="text-center mt-5">
+            <button id="sellBtn" class="btn btn-primary mr-2">SELL</button>
+            <button id="buyBtn" class="btn btn-success mr-2">BUY</button>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and Popper.js scripts here -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Include Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js"></script>
+    <!-- Add your Firebase Config -->
+    <script src="/Users/johnwesley/Desktop/WESLEY/Work/Server/firebase_admin.json"></script>
+    <!-- Add your JavaScript link for handling button clicks -->
+    <script src="home.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Initialize Firebase
+            const firebaseConfig = {
+                // Your Firebase configuration
+            };
+
+            firebase.initializeApp(firebaseConfig);
+        });
+    </script>
+</body>
+</html>
